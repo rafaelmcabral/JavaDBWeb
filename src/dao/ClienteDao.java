@@ -17,7 +17,7 @@ public class ClienteDao {
 	public ClienteDao() throws ClassNotFoundException {
 		this.con = new ConnectionFactory().getConnection();
 	}
-
+	
 	public List<Cliente> getClientes() {
 		try {
 			List<Cliente> clientes = new ArrayList<Cliente>();
