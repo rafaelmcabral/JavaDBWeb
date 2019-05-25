@@ -7,7 +7,9 @@
 <title>Teste Insert Client</title>
 </head>
 <body>
-	<form action="rnservletadiciona" method="post">
+	<form action="mvc" method="post">
+		<!-- <input type="hidden" name="regra" value="InsertCliente" />-->
+		<input type="hidden" name="regra" value="TestePrimeiraRegraFake" />
 		Nome: <input type="text" name="nome"/><br/>	
 		Email:<input type="text" name="email"/><br/>	
 		Endereço: <input type="text" name="endereco"/><br/>

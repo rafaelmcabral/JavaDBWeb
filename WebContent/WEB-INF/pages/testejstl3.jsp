@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Testejstl.jsp</title>
+<title>Testejstl.jsp WEB-INF</title>
 <script type="text/javascript">
 function realizarExclusao(id) {
 	if (confirm("Deseja excluir o cliente " + id + "?")) {
@@ -16,9 +16,8 @@ function realizarExclusao(id) {
 </script>
 </head>
 <body>
-<jsp:useBean id="dao" class="dao.ClienteDao"></jsp:useBean>
 <table>
-	<c:forEach var="cliente" items="${dao.getClientes()}">
+	<c:forEach var="cliente" items="${clientes}">
 		<tr>
 			<td>${cliente.getId()}</td>
 			<td>${cliente.getNome()}</td>

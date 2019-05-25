@@ -16,9 +16,8 @@ function realizarExclusao(id) {
 </script>
 </head>
 <body>
-<jsp:useBean id="dao" class="dao.ClienteDao"></jsp:useBean>
 <table>
-	<c:forEach var="cliente" items="${dao.getClientes()}">
+	<c:forEach var="cliente" items="${clientes}">
 		<tr>
 			<td>${cliente.getId()}</td>
 			<td>${cliente.getNome()}</td>
