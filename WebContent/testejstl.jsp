@@ -13,7 +13,14 @@
 	<c:forEach var="cliente" items="${dao.getClientes()}">
 		<tr>
 			<td>${cliente.getNome()}</td>
-			<td>${cliente.getEmail()}</td>
+			<td>
+				<c:if test="${not empty cliente.getEmail()}">
+					<a href="mailto:${cliente.getEmail()}">${cliente.getEmail()}</a>
+				</c:if>
+				<c:if test="${empty cliente.getEmail()}">
+					E-mail não informado
+				</c:if>
+			</td>
 			<td>${cliente.getEndereco()}</td>
 		</tr>
 	</c:forEach>
